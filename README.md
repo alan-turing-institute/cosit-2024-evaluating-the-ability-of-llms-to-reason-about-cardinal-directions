@@ -40,4 +40,4 @@ paper](https://doi.org/10.4230/LIPIcs.COSIT.2024.28).
 [2] Anthony G Cohn and Robert E Blackwell. Evaluating the Ability of
 Large Language Models to Reason About Cardinal Directions,
 Revisited. QR 2025 : 38th International Workshop on Qualitative
-Reasoning at IJCAI. IN PRESS.
+Reasoning at IJCAI. [QR 2025 paper](https://arxiv.org/abs/2507.12059).
