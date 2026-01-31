@@ -118,7 +118,7 @@ def prediction_interval(samples, confidence=0.95):
     return margin_of_error
 
 
-def plot_model_scores(df, ax=None, width=6, height=8, fontsize=10):
+def plot_model_scores(df, ax=None, width=6, height=10, fontsize=10):
     plt.rcParams.update({"font.size": fontsize})  # Adjust the value as needed
 
     # Grouping and aggregating the data
@@ -136,7 +136,10 @@ def plot_model_scores(df, ax=None, width=6, height=8, fontsize=10):
     )
 
     # Define color mapping
-    colors = df["colour"].apply(lambda x: "#a6cee3" if x == 1 else "#b2df8a")
+    # colors = df["colour"].apply(lambda x: "#a6cee3" if x == 1 else "#b2df8a")
+    colors = df["colour"].apply(
+        lambda x: "#a6cee3" if x == 1 else "#b2df8a" if x == 2 else "#fb9a99"
+    )
 
     # Create a new figure and axis if not provided
     if ax is None:
@@ -146,11 +149,11 @@ def plot_model_scores(df, ax=None, width=6, height=8, fontsize=10):
 
     # Models to highlight
     highlight_models = {
-        "azure-o1-2024-12-17",
-        "azure-o3-mini-2025-01-31",
-        "azure-o3-mini-2025-01-31-high",
-        "azure-o4-mini-2025-04-16",
-        "deepseek-reasoner",
+        # "azure-o1-2024-12-17",
+        # "azure-o3-mini-2025-01-31",
+        # "azure-o3-mini-2025-01-31-high",
+        # "azure-o4-mini-2025-04-16",
+        # "deepseek-reasoner",
     }
 
     # Creating the horizontal bar plot with dynamic colors
