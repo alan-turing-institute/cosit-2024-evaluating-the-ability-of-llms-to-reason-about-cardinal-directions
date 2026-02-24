@@ -6,7 +6,7 @@ answers.jsonl.xz: answers.jsonl
 	xz -k answers.jsonl
 
 answers.jsonl: ../prompts.jsonl ../system-prompt.txt
-	$(GOLEM) -v --system-prompt ../system-prompt.txt --provider openrouter --model "moonshotai/kimi-k2-0905"  --temperature 0.0 --seed 123 -f $< > $(TEMP)
+	$(GOLEM) -v --system-prompt ../system-prompt.txt --provider openrouter --model "moonshotai/kimi-k2-0905" --repeat "0:3"  --temperature 0.0 --seed 123 -f $< > $(TEMP)
 	mv $(TEMP) $@
 
 clean:
